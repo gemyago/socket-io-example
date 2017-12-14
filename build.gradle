@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = 'demo.SocketIoDemo'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+  compile ('io.socket:socket.io-client:1.0.0') {
+    // excluding org.json which is provided by Android
+    // exclude group: 'org.json', module: 'json'
+  }
+}
+
+run {
+    if (project.hasProperty("appArgs")) {
+        args Eval.me(appArgs)
+    }
+}
