@@ -1,8 +1,13 @@
 package demo;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+import java.util.TimeZone;
 
 import io.socket.client.IO;
 import io.socket.client.Manager;
@@ -110,8 +115,15 @@ public class SocketIoDemo {
             showMessages(tag + ", args: " + Arrays.toString(args));
         }
     }
+    
+    static DateFormat dateFormat;
+    static {
+      dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);
+      dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+    }
 
     private static void showMessages(final String message) {
-        System.out.println("message: " + message);
+        String now = dateFormat.format(new Date());
+        System.out.println("[" + now + "] message: " + message);
     }
 }
