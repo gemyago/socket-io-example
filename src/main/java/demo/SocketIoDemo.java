@@ -23,7 +23,7 @@ public class SocketIoDemo {
         demo.start();
     }
 
-    private String defAuth = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3N0YWdlLWFwaS5kb2RkbGUuaW8vdjItb2F1dGgiLCJzdWIiOiJucmZkZW1vLWJvaC1hbmRyb2lkIiwiZXhwIjoxNTEzNjc2ODY0LCJuYmYiOjE1MTM1OTA0MDQsImlhdCI6MTUxMzU5MDQ2NCwianRpIjoiZDg5NDc5NWYtNGJhZS00NGRiLWFhYjItNjUyZjVhNzc1OTI5Iiwic2NvcGUiOiJhcHBfbnJmZGVtby1ib2gtYW5kcm9pZCBzdG9yZXNfcmVhZCByZWFsdGltZS1sb2NhdGlvbi1yZWFkIiwiZG9kZGxlIjp7ImFwcCI6eyJhcHBOYW1lIjoibnJmZGVtby1ib2gtYW5kcm9pZCIsIm9yZ2FuaXNhdGlvbklkIjoiRE9ERExFIn19fQ.zK3tFTEkRv3Zeyp3OgrQkEoN0r_XZ5apiRUOZ9PIgJA";
+    private String defAuth = "Bearer xxx";
     private String mAuth;
     private String mBaseUrl;
     private List<String> mCookie;
