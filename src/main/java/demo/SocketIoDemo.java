@@ -9,6 +9,7 @@ import io.socket.client.Manager;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
 import io.socket.engineio.client.Transport;
+import io.socket.engineio.client.transports.Polling;
 
 public class SocketIoDemo {
 
@@ -23,7 +24,8 @@ public class SocketIoDemo {
         demo.start();
     }
 
-    private String defAuth = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3N0YWdlLWFwaS5kb2RkbGUuaW8vdjItb2F1dGgiLCJzdWIiOiJucmZkZW1vLWJvaC1hbmRyb2lkIiwiZXhwIjoxNTEzNjc2ODY0LCJuYmYiOjE1MTM1OTA0MDQsImlhdCI6MTUxMzU5MDQ2NCwianRpIjoiZDg5NDc5NWYtNGJhZS00NGRiLWFhYjItNjUyZjVhNzc1OTI5Iiwic2NvcGUiOiJhcHBfbnJmZGVtby1ib2gtYW5kcm9pZCBzdG9yZXNfcmVhZCByZWFsdGltZS1sb2NhdGlvbi1yZWFkIiwiZG9kZGxlIjp7ImFwcCI6eyJhcHBOYW1lIjoibnJmZGVtby1ib2gtYW5kcm9pZCIsIm9yZ2FuaXNhdGlvbklkIjoiRE9ERExFIn19fQ.zK3tFTEkRv3Zeyp3OgrQkEoN0r_XZ5apiRUOZ9PIgJA";
+    private String defAuth = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3N0YWdlLWFwaS5kb2RkbGUuaW8vdjItb2F1dGgiLCJzdWIiOiJucmZkZW1vLWJvaC1hbmRyb2lkIiwiZXhwIjoxNTEzNjc4MjI1LCJuYmYiOjE1MTM1OTE3NjUsImlhdCI6MTUxMzU5MTgyNSwianRpIjoiNTBkZTgyN2UtMmM0MS00ZGNlLThiZDYtZGIxN2E2OWU1YjEyIiwic2NvcGUiOiJhcHBfbnJmZGVtby1ib2gtYW5kcm9pZCBzdG9yZXNfcmVhZCByZWFsdGltZS1sb2NhdGlvbi1yZWFkIiwiZG9kZGxlIjp7ImFwcCI6eyJhcHBOYW1lIjoibnJmZGVtby1ib2gtYW5kcm9pZCIsIm9yZ2FuaXNhdGlvbklkIjoiRE9ERExFIn19fQ.aV19Wl1SAysOEFkuicF5Wxs5Gbfaxv4jsKuWCOK5KxY";
+
     private String mAuth;
     private String mBaseUrl;
     private List<String> mCookie;
@@ -40,6 +42,7 @@ public class SocketIoDemo {
 
         IO.Options opts = new IO.Options();
         opts.path = "/v1/realtime-location/socket.io";
+        opts.transports = new String[]{Polling.NAME};
 
         try {
             Socket socket = IO.socket(mBaseUrl, opts);
