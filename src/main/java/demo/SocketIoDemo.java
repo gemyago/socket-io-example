@@ -24,7 +24,7 @@ public class SocketIoDemo {
         demo.start();
     }
 
-    private String defAuth = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3N0YWdlLWFwaS5kb2RkbGUuaW8vdjItb2F1dGgiLCJzdWIiOiJucmZkZW1vLWJvaC1hbmRyb2lkIiwiZXhwIjoxNTEzNjc4MjI1LCJuYmYiOjE1MTM1OTE3NjUsImlhdCI6MTUxMzU5MTgyNSwianRpIjoiNTBkZTgyN2UtMmM0MS00ZGNlLThiZDYtZGIxN2E2OWU1YjEyIiwic2NvcGUiOiJhcHBfbnJmZGVtby1ib2gtYW5kcm9pZCBzdG9yZXNfcmVhZCByZWFsdGltZS1sb2NhdGlvbi1yZWFkIiwiZG9kZGxlIjp7ImFwcCI6eyJhcHBOYW1lIjoibnJmZGVtby1ib2gtYW5kcm9pZCIsIm9yZ2FuaXNhdGlvbklkIjoiRE9ERExFIn19fQ.aV19Wl1SAysOEFkuicF5Wxs5Gbfaxv4jsKuWCOK5KxY";
+    private String defAuth = "Bearer xxx";
 
     private String mAuth;
     private String mBaseUrl;
